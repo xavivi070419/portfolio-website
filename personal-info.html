@@ -5,6 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Xavier | About Me</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Specific styling for the 2x2 numbered cards layout */
+    .about-split-container {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3rem;
+      width: 100%;
+      align-items: center;
+    }
+
+    .about-left {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .about-bio-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin: 0.5rem 0 1rem 0;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1E3A8A;
+    }
+
+    .about-bio-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .numbered-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .number-card {
+      background: #ffffff;
+      border: 1px solid #bfdbfe;
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      box-shadow: 0 2px 6px rgba(30,58,138,0.02);
+    }
+
+    .badge-number {
+      background: #1E3A8A;
+      color: #ffffff;
+      font-size: 0.8rem;
+      font-weight: 800;
+      width: 36px;
+      height: 28px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .number-card h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #1E3A8A;
+    }
+
+    .number-card p {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: #3b82f6;
+    }
+  </style>
 </head>
 <body>
   <div class="app-container">
@@ -23,26 +97,68 @@
       </div>
     </header>
 
-    <!-- Main Content Area -->
-    <main class="main-content" style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 1.5rem;">
-      <div>
-        <span class="cs-badge">Personal Profile</span>
-        <h2 style="font-size: 2.2rem; font-weight: 800;">Xavier Czachie Jhay O. Rivera</h2>
-      </div>
+    <!-- Main Content Split View -->
+    <main class="main-content">
+      <div class="about-split-container">
+        
+        <!-- Left Column: Title, Bio & Quick Info -->
+        <div class="about-left">
+          <div>
+            <span class="cs-badge">Personal Info</span>
+            <h1 style="font-size: 3rem; font-weight: 900; letter-spacing: -1px; margin-top: 0.25rem; color: #1E3A8A;">ABOUT ME</h1>
+            <p style="font-size: 0.95rem; font-weight: 700; color: #1E3A8A; margin-top: 0.25rem;">Xavier Czachie Jhay O. Rivera</p>
+          </div>
 
-      <div class="page-grid">
-        <div class="card">
-          <h3>Academic Background</h3>
-          <p>First-year Computer Science student passionate about core programming logic, software engineering principles, and web technologies.</p>
+          <p style="font-size: 0.95rem; line-height: 1.6; color: #3b82f6;">
+            Passionate about breaking down complex computing challenges into streamlined solutions. Focused on object-oriented programming, data structures, and modern front-end web design.
+          </p>
+
+          <div class="about-bio-list">
+            <div class="about-bio-item">
+              🎓 BS Computer Science
+            </div>
+            <div class="about-bio-item">
+              📍 GitHub Pages Portfolio
+            </div>
+            <div class="about-bio-item">
+              💻 Java, C++, HTML/CSS, JS
+            </div>
+          </div>
+
+          <div>
+            <a href="achievements.html" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.85rem;">VIEW ACHIEVEMENTS &rarr;</a>
+          </div>
         </div>
-        <div class="card">
-          <h3>Technical Proficiencies</h3>
-          <p>Developing strong fundamentals in Java, Python scripting, HTML5, CSS3, and modern visual UI design.</p>
+
+        <!-- Right Column: 2x2 Numbered Feature Cards -->
+        <div class="numbered-grid">
+          
+          <div class="number-card">
+            <div class="badge-number">01</div>
+            <h3>Clean Execution</h3>
+            <p>Writing readable, maintainable, and efficient code with strict attention to modular architecture.</p>
+          </div>
+
+          <div class="number-card">
+            <div class="badge-number">02</div>
+            <h3>UI/UX Aesthetics</h3>
+            <p>Designing editorial high-contrast web interfaces that prioritize legibility and user delight.</p>
+          </div>
+
+          <div class="number-card">
+            <div class="badge-number">03</div>
+            <h3>System Logic</h3>
+            <p>Understanding low-level hardware interactions alongside high-level software frameworks.</p>
+          </div>
+
+          <div class="number-card">
+            <div class="badge-number">04</div>
+            <h3>Continuous Growth</h3>
+            <p>Regularly expanding knowledge through collaborative university projects and open-source explorations.</p>
+          </div>
+
         </div>
-        <div class="card">
-          <h3>Development Mindset</h3>
-          <p>Dedicated to clean execution, systematic problem-solving, and continuous self-improvement across technical disciplines.</p>
-        </div>
+
       </div>
     </main>
 
