@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Family</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Xavier | Family</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="app-container">
+    
+    <!-- Top Header & Navigation -->
     <header class="navbar">
-      <a href="index.html" class="brand-logo">ENZO.</a>
+      <a href="index.html" class="brand-logo">XAVIER.</a>
       <nav>
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link">Home</a></li>
@@ -20,28 +22,42 @@
       </nav>
     </header>
 
-    <main class="main-content" style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 2rem;">
+    <!-- Main Content Area -->
+    <main class="main-content" style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 1.5rem;">
       <div>
         <span class="greeting-tag">Background</span>
-        <h2 style="font-size: 2.5rem; font-weight: 800;">Family & Roots</h2>
+        <h2 style="font-size: 2.2rem; font-weight: 800;">Family & Roots</h2>
       </div>
 
-      <div class="page-grid">
-        <div class="card">
-          <h3>Support System</h3>
-          <p>A grounded foundation centered around strong core values and shared family experiences.</p>
+      <!-- Two-column split layout for the family photo and background cards -->
+      <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; width: 100%; align-items: center;">
+        
+        <!-- Family Photo Container (References family-photo.jpg in repo root) -->
+        <div style="width: 100%; display: flex; justify-content: center;">
+          <img src="family-photo.jpg" alt="Family Photo" style="width: 100%; max-height: 50vh; object-fit: cover; border-radius: 8px; border: 1px solid #eaeaea;">
         </div>
-        <div class="card">
-          <h3>Life Lessons</h3>
-          <p>Focusing on hard work, discipline, and remaining persistent across academic challenges.</p>
+
+        <!-- Description Cards -->
+        <div style="display: flex; flex-direction: column; gap: 1rem; width: 100%;">
+          <div class="card" style="padding: 1.25rem;">
+            <h3>Support System</h3>
+            <p>A grounded foundation centered around strong core values, guidance, and shared family experiences.</p>
+          </div>
+          <div class="card" style="padding: 1.25rem;">
+            <h3>Core Values</h3>
+            <p>Instilling a strong work ethic, discipline, and persistence to excel through computer science and academic challenges.</p>
+          </div>
         </div>
+
       </div>
     </main>
 
+    <!-- Bottom Footer Navigation -->
     <footer class="footer">
       <a href="achievements.html" class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.85rem;">← Back: Achievements</a>
       <a href="index.html" class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.85rem;">Return Home ↵</a>
     </footer>
+
   </div>
 </body>
 </html>
