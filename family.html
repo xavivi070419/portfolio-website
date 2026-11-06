@@ -4,41 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Xavier | Family</title>
-  <!-- Link to shared stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="app-container">
     
-    <!-- Top Header & Navigation -->
+    <!-- Top Pill Navbar -->
     <header class="navbar">
       <a href="index.html" class="brand-logo">XAVIER.</a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="personal-info.html" class="nav-link">About</a></li>
-          <li><a href="achievements.html" class="nav-link">Achievements</a></li>
-          <li><a href="family.html" class="nav-link active">Family</a></li>
-        </ul>
-      </nav>
+      <ul class="nav-pill-container">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="personal-info.html" class="nav-link">About</a></li>
+        <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+        <li><a href="family.html" class="nav-link active">Family</a></li>
+      </ul>
+      <div class="status-badge">
+        <span class="status-dot"></span> No-Scroll Dashboard View
+      </div>
     </header>
 
     <!-- Main Content Area -->
     <main class="main-content" style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 1.5rem;">
       <div>
-        <span class="greeting-tag">Background</span>
+        <span class="cs-badge">Background</span>
         <h2 style="font-size: 2.2rem; font-weight: 800;">Family & Roots</h2>
       </div>
 
-      <!-- Two-column split layout for the family photo and background cards -->
       <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; width: 100%; align-items: center;">
-        
-        <!-- Family Photo Container -->
         <div style="width: 100%; display: flex; justify-content: center;">
           <img src="family-photo.jpg" alt="Family Photo" style="width: 100%; max-height: 50vh; object-fit: cover; border-radius: 8px; border: 1px solid #eaeaea;">
         </div>
 
-        <!-- Description Cards -->
         <div style="display: flex; flex-direction: column; gap: 1rem; width: 100%;">
           <div class="card" style="padding: 1.25rem;">
             <h3>Support System</h3>
@@ -49,14 +45,13 @@
             <p>Instilling a strong work ethic, discipline, and persistence to excel through computer science and academic challenges.</p>
           </div>
         </div>
-
       </div>
     </main>
 
-    <!-- Bottom Footer Navigation -->
+    <!-- Footer -->
     <footer class="footer">
-      <a href="achievements.html" class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.85rem;">← Back: Achievements</a>
-      <a href="index.html" class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.85rem;">Return Home ↵</a>
+      <a href="achievements.html" class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.85rem;">&larr; Back: Achievements</a>
+      <div class="signature">Xavier...</div>
     </footer>
 
   </div>

@@ -13,7 +13,12 @@ html, body {
   overflow: hidden; 
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background-color: #ffffff;
-  color: #0d0d0d;
+  /* Subtle graph paper grid background */
+  background-image: linear-gradient(to right, rgba(30, 58, 138, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(30, 58, 138, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  /* All default text set to Aureu Blue (#1E3A8A) */
+  color: #1E3A8A;
 }
 
 .app-container {
@@ -26,7 +31,7 @@ html, body {
 }
 
 /* ==========================================
-   NAVIGATION BAR (Identical on all pages)
+   NAVIGATION BAR (Pill Container Style)
    ========================================== */
 .navbar {
   display: flex;
@@ -41,26 +46,53 @@ html, body {
   font-weight: 800;
   letter-spacing: -0.5px;
   text-decoration: none;
-  color: #000000;
+  color: #1E3A8A;
 }
 
-.nav-links {
+/* Centered Pill Navigation Container */
+.nav-pill-container {
   display: flex;
   gap: 2rem;
   list-style: none;
+  background: #ffffff;
+  border: 1px solid #bfdbfe;
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(30,58,138,0.04);
 }
 
 .nav-link {
   text-decoration: none;
-  color: #666666;
-  font-size: 0.95rem;
+  color: #60a5fa;
+  font-size: 0.9rem;
   font-weight: 600;
   transition: color 0.2s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: #000000;
+  color: #1E3A8A;
+}
+
+/* Right Status Badge */
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  border: 1px solid #bfdbfe;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #1E3A8A;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #10b981;
+  border-radius: 50%;
 }
 
 /* ==========================================
@@ -77,17 +109,24 @@ html, body {
 }
 
 .hero-text {
-  max-width: 550px;
+  max-width: 650px;
 }
 
-.greeting-tag {
-  display: inline-block;
-  font-size: 0.85rem;
+/* Computer Science Badge Tag */
+.cs-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 2px;
-  color: #666666;
+  letter-spacing: 0.5px;
+  color: #1E3A8A;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .hero-title {
@@ -96,13 +135,18 @@ html, body {
   letter-spacing: -2px;
   line-height: 1;
   margin-bottom: 1.5rem;
+  color: #1E3A8A;
 }
 
 .hero-description {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #555555;
+  color: #3b82f6;
   margin-bottom: 2rem;
+}
+
+.hero-description strong {
+  color: #1E3A8A;
 }
 
 /* ==========================================
@@ -117,6 +161,7 @@ html, body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   padding: 0.85rem 1.8rem;
   font-weight: 600;
   font-size: 0.95rem;
@@ -126,21 +171,22 @@ html, body {
 }
 
 .btn-primary {
-  background: #000000;
+  background: #1E3A8A;
   color: #ffffff;
 }
 
 .btn-primary:hover {
-  background: #222222;
+  background: #172554;
 }
 
 .btn-outline {
-  border: 1px solid #000000;
-  color: #000000;
+  background: #ffffff;
+  border: 1px solid #93c5fd;
+  color: #1E3A8A;
 }
 
 .btn-outline:hover {
-  background: #f4f4f4;
+  background: #eff6ff;
 }
 
 /* ==========================================
@@ -153,10 +199,11 @@ html, body {
 }
 
 .profile-img {
-  max-height: 65vh;
+  max-height: 60vh;
   width: auto;
   object-fit: contain;
-  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #bfdbfe;
 }
 
 /* ==========================================
@@ -171,44 +218,62 @@ html, body {
 
 .card {
   padding: 2rem;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #bfdbfe;
   border-radius: 8px;
   background: #ffffff;
+  box-shadow: 0 2px 6px rgba(30,58,138,0.02);
 }
 
 .card h3 {
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
+  color: #1E3A8A;
 }
 
 .card p {
-  color: #666666;
+  color: #3b82f6;
   font-size: 0.95rem;
   line-height: 1.5;
 }
 
 /* ==========================================
-   FOOTER CONTROLS
+   FOOTER (Social Icons & Signature)
    ========================================== */
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid #bfdbfe;
 }
 
-.status-pill {
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-icon {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.85rem;
-  color: #555;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #93c5fd;
+  border-radius: 50%;
+  color: #1E3A8A;
+  text-decoration: none;
+  background: #ffffff;
+  transition: all 0.2s ease;
 }
 
-.dot {
-  width: 8px;
-  height: 8px;
-  background-color: #10b981;
-  border-radius: 50%;
+.social-icon:hover {
+  background: #1E3A8A;
+  color: #ffffff;
+  border-color: #1E3A8A;
+}
+
+.signature {
+  font-family: 'Brush Script MT', cursive, sans-serif;
+  font-size: 1.5rem;
+  color: #1E3A8A;
 }
