@@ -4,47 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Home</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="app-container">
+    <!-- Header Navigation -->
+    <header class="navbar">
+      <a href="index.html" class="brand-logo">ENZO.</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="personal-info.html" class="nav-link">About</a></li>
+          <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+          <li><a href="family.html" class="nav-link">Family</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="brand">PORTFOLIO</a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">HOME</a></li>
-        <li><a href="personal-info.html">ABOUT</a></li>
-        <li><a href="achievements.html">ACHIEVEMENTS</a></li>
-        <li><a href="family.html">FAMILY</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero-section">
+    <!-- Main Fixed Viewport -->
+    <main class="main-content">
       <div class="hero-text">
-        <!-- EDIT HOME PAGE SUBTITLE HERE -->
-        <h3>✦ COMPUTER SCIENCE STUDENT</h3>
-        
-        <!-- EDIT HOME PAGE MAIN TITLE HERE -->
-        <h1>DESIGNING CLEAN & EFFICIENT SYSTEMS</h1>
-        
-        <!-- EDIT HOME PAGE DESCRIPTION PARAGRAPH HERE -->
-        <p>Welcome to my personal workspace—a space where continuous learning, clean execution, 
-    and meaningful problem-solving intersect to build software that makes an impact.</p>
+        <span class="greeting-tag">Hello, I'm</span>
+        <h1 class="hero-title">ENZO</h1>
+        <p class="hero-description">
+          First-Year Computer Science student focused on building clean, efficient software and structured web interfaces.
+        </p>
+        <div class="cta-group">
+          <a href="achievements.html" class="btn btn-primary">View Projects</a>
+          <a href="personal-info.html" class="btn btn-outline">About Me</a>
+        </div>
       </div>
-      
+
       <div class="photo-wrapper">
-        <div class="orange-glow"></div>
-        <!-- Profile photo appears only on home page -->
-        <img src="photo.jpg" alt="Profile Photo" class="profile-photo">
+        <img src="your-photo.jpg" alt="Enzo" class="profile-img">
       </div>
-    </section>
-  </main>
+    </main>
 
-  <footer>
-    <p>&copy; 2026 Personal Portfolio. All rights reserved.</p>
-  </footer>
-
+    <!-- Footer Controls -->
+    <footer class="footer">
+      <div class="status-pill">
+        <span class="dot"></span> Open for collaboration
+      </div>
+      <div class="nav-actions">
+        <a href="personal-info.html" class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.85rem;">Next: About →</a>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>

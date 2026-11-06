@@ -7,39 +7,48 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="app-container">
+    <!-- Header Navigation -->
+    <header class="navbar">
+      <a href="index.html" class="brand-logo">PORTFOLIO.</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="personal-info.html" class="nav-link">About</a></li>
+          <li><a href="achievements.html" class="nav-link active">Achievements</a></li>
+          <li><a href="family.html" class="nav-link">Family</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="brand">PORTFOLIO</a>
-      <ul class="nav-links">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="personal-info.html">ABOUT</a></li>
-        <li><a href="achievements.html" class="active">ACHIEVEMENTS</a></li>
-        <li><a href="family.html">FAMILY</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Main Content Grid -->
+    <main class="main-content" style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 1.5rem;">
+      <div>
+        <span class="greeting-tag">Milestones & Work</span>
+        <h2 style="font-size: 2.2rem; font-weight: 800;">Projects & Achievements</h2>
+      </div>
 
-  <main>
-    <section class="single-content">
-      <!-- EDIT ACHIEVEMENTS SUBTITLE HERE -->
-      <h3>✦ MILESTONES & PROJECTS</h3>
-      
-      <!-- EDIT ACHIEVEMENTS MAIN TITLE HERE -->
-      <h1>ACADEMIC ACHIEVEMENTS</h1>
-      
-      <!-- EDIT ACHIEVEMENTS BULLET POINTS / DESCRIPTIONS HERE -->
-      <ul class="content-list">
-        <li><strong>Multi-Base Calculator:</strong> Developed a functional program in Java managing binary, octal, decimal, and hexadecimal conversions.</li>
-        <li><strong>Purposive Communication:</strong> Formulated structured customer service communication packages and professional presentation scripts.</li>
-        <li><strong>Web Deployment:</strong> Successfully engineered and published a secure, multi-page dark-mode web portfolio adhering to rigorous standards.</li>
-      </ul>
-    </section>
-  </main>
+      <div class="page-grid">
+        <div class="card">
+          <h3>Multi-Base Calculator</h3>
+          <p>Built a functional Java program performing arithmetic conversions across Binary, Octal, Decimal, and Hexadecimal bases.</p>
+        </div>
+        <div class="card">
+          <h3>GitHub Portfolio Site</h3>
+          <p>Designed and deployed a responsive multi-page website on GitHub Pages with zero-scroll viewport navigation.</p>
+        </div>
+        <div class="card">
+          <h3>Academic Transition</h3>
+          <p>Successfully shifted into Computer Science, excelling in foundational programming and computing coursework.</p>
+        </div>
+      </div>
+    </main>
 
-  <footer>
-    <p>&copy; 2026 Personal Portfolio. All rights reserved.</p>
-  </footer>
-
+    <!-- Footer Controls -->
+    <footer class="footer">
+      <a href="personal-info.html" class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.85rem;">← Back: About</a>
+      <a href="family.html" class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.85rem;">Next: Family →</a>
+    </footer>
+  </div>
 </body>
 </html>

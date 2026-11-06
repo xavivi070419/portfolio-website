@@ -4,53 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Family</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="app-container">
+    <header class="navbar">
+      <a href="index.html" class="brand-logo">ENZO.</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="personal-info.html" class="nav-link">About</a></li>
+          <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+          <li><a href="family.html" class="nav-link active">Family</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="brand">PORTFOLIO</a>
-      <ul class="nav-links">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="personal-info.html">ABOUT</a></li>
-        <li><a href="achievements.html">ACHIEVEMENTS</a></li>
-        <li><a href="family.html" class="active">FAMILY</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section class="family-container">
-      <!-- EDIT FAMILY SUBTITLE HERE -->
-      <h3>✦ SUPPORT SYSTEM</h3>
-      
-      <!-- EDIT FAMILY MAIN TITLE HERE -->
-      <h1>ABOUT MY FAMILY</h1>
-      
-      <!-- EDIT FAMILY DESCRIPTION PARAGRAPH OR BULLETS HERE -->
-      <ul class="content-list">
-        <li><strong>Mother:</strong> Behind every sacrifice my mother made was an unshakeable love that asked for nothing in return. 
-          From waking up before dawn to ensure our home was cared for, to carrying the weight of our family’s worries on her own shoulders, her life has been a living testament to selfless devotion. 
-          She didn't just nurture us—she gave up her own comfort, poured her heart into every meal, and surrounded us with a protective warmth that made every hardship feel manageable. 
-          Her love is the quiet foundation of everything I am, and no matter where life takes me, I carry the depth of her sacrifices and the warmth of her care with endless gratitude.
-        </li>
-        <li><strong>Father:</strong> Behind every horizon my father chased as a seafarer was a quiet, profound devotion to our family. Leaving home to face long months across oceans is a sacrifice few truly understand, yet he carried that heavy weight so we could build a better future. 
-          Even though distance meant we couldn't see him every day growing up, his presence never faded—his voice, his guidance, and his steady encouragement reached us across every wave. 
-          He showed us that fatherhood isn't defined by proximity, but by the strength of a love that withstands time, distance, and sacrifice. He remains our anchor and constant protector, and I am endlessly grateful for everything he surrendered for us.</li>
-      </ul>
-
-      <!-- FAMILY PICTURE IN THE MIDDLE -->
-      <div class="family-photo-wrapper">
-        <!-- Change 'family-photo.jpg' to match your actual uploaded family image filename -->
-        <img src="family-photo.jpg" alt="Me with Mom and Dad" class="family-photo">
+    <main class="main-content" style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 2rem;">
+      <div>
+        <span class="greeting-tag">Background</span>
+        <h2 style="font-size: 2.5rem; font-weight: 800;">Family & Roots</h2>
       </div>
-    </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2026 Personal Portfolio. All rights reserved.</p>
-  </footer>
+      <div class="page-grid">
+        <div class="card">
+          <h3>Support System</h3>
+          <p>A grounded foundation centered around strong core values and shared family experiences.</p>
+        </div>
+        <div class="card">
+          <h3>Life Lessons</h3>
+          <p>Focusing on hard work, discipline, and remaining persistent across academic challenges.</p>
+        </div>
+      </div>
+    </main>
 
+    <footer class="footer">
+      <a href="achievements.html" class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.85rem;">← Back: Achievements</a>
+      <a href="index.html" class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.85rem;">Return Home ↵</a>
+    </footer>
+  </div>
 </body>
 </html>

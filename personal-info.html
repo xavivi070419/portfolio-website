@@ -1,63 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Personal Info</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Personal Info</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header>
-        <nav class="navbar">
-            <a href="index.html" class="brand">PORTFOLIO</a>
-            <ul class="nav-links">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="personal-info.html" class="active">ABOUT</a></li>
-                <li><a href="achievements.html">ACHIEVEMENTS</a></li>
-                <li><a href="family.html">FAMILY</a></li>
-            </ul>
-        </nav>
+  <div class="app-container">
+    <!-- Header Navigation -->
+    <header class="navbar">
+      <a href="index.html" class="brand-logo">PORTFOLIO.</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="personal-info.html" class="nav-link active">About</a></li>
+          <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+          <li><a href="family.html" class="nav-link">Family</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main>
-        <section class="single-content">
-            <!-- EDIT PERSONAL INFO SUBTITLE HERE -->
-            <h3>✦ BACKGROUND &amp; PROFILE</h3>
+    <!-- Main Content Grid -->
+    <main class="main-content" style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 1.5rem;">
+      <div>
+        <span class="greeting-tag">Personal Profile</span>
+        <h2 style="font-size: 2.2rem; font-weight: 800;">About Me</h2>
+      </div>
 
-            <!-- EDIT PERSONAL INFO MAIN TITLE HERE -->
-            <h1>PERSONAL INFORMATION</h1>
-
-            <!-- EDIT PERSONAL INFO BULLET POINTS / DESCRIPTIONS HERE -->
-            <ul class="content-list">
-                <li>
-                    <strong>Academic Path:</strong> BS Computer Science student from the University of the Cordilleras with an analytical background.
-                </li>
-                <li>
-                    <strong>Technical Focus:</strong> Java programming, Python scripting, and front-end HTML/CSS architecture.
-                </li>
-                <li>
-                    <strong>Professional Mindset:</strong> Detail-oriented, performance-driven, and focused on clean software practices.
-                </li>
-                <li>
-                    <strong>Location &amp; Availability:</strong> Philippines (Open to Remote &amp; Internship and Work Opportunities)
-                </li>
-                <li>
-                    <strong>Direct Contact:</strong> 
-                    <a href="mailto:czachiejhay@gmail.com">czachiejhay@gmail.com</a>
-                </li>
-                <li>
-                    <strong>Professional Networks:</strong> 
-                    <a href="https://github.com/xavivi070419" target="_blank" rel="noopener noreferrer">GitHub</a> • 
-                    <a href="https://www.linkedin.com/in/xav-undefined-b87b01443/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                </li>
-            </ul>
-        </section>
+      <div class="page-grid">
+        <div class="card">
+          <h3>Academic Background</h3>
+          <p>First-year Computer Science student passionate about core programming logic, software engineering principles, and web technologies.</p>
+        </div>
+        <div class="card">
+          <h3>Technical Proficiencies</h3>
+          <p>Developing strong fundamentals in Java, Python scripting, HTML5, CSS3, and modern visual UI design.</p>
+        </div>
+        <div class="card">
+          <h3>Development Mindset</h3>
+          <p>Dedicated to clean execution, systematic problem-solving, and continuous self-improvement across technical disciplines.</p>
+        </div>
+      </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Personal Portfolio. All rights reserved.</p>
+    <!-- Footer Controls -->
+    <footer class="footer">
+      <a href="index.html" class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.85rem;">← Back: Home</a>
+      <a href="achievements.html" class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.85rem;">Next: Achievements →</a>
     </footer>
-
+  </div>
 </body>
 </html>
