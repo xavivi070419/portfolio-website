@@ -6,11 +6,11 @@
   <title>Xavier | About Me</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Specific styling for the 2x2 numbered cards layout */
+    /* Main split container layout */
     .about-split-container {
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 3rem;
+      grid-template-columns: 0.9fr 1.3fr;
+      gap: 2.5rem;
       width: 100%;
       align-items: center;
     }
@@ -18,15 +18,15 @@
     .about-left {
       display: flex;
       flex-direction: column;
-      gap: 1.25rem;
+      gap: 1rem;
     }
 
     .about-bio-list {
       display: flex;
       flex-direction: column;
-      gap: 0.8rem;
-      margin: 0.5rem 0 1rem 0;
-      font-size: 0.95rem;
+      gap: 0.75rem;
+      margin: 0.25rem 0 0.5rem 0;
+      font-size: 0.9rem;
       font-weight: 600;
       color: #1E3A8A;
     }
@@ -37,13 +37,13 @@
       gap: 0.75rem;
     }
 
-    /* GitHub row layout with controlled spacing for middle-right alignment */
+    /* GitHub row layout with middle-right icon alignment */
     .github-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      padding-right: 2rem; /* Pulls icons slightly inward toward the center */
+      padding-right: 1.5rem;
     }
 
     .inline-social-group {
@@ -52,13 +52,12 @@
       gap: 0.75rem;
     }
 
-    /* Larger social icons */
     .inline-social-icon {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 42px;
-      height: 42px;
+      width: 40px;
+      height: 40px;
       border: 1.5px solid #93c5fd;
       border-radius: 50%;
       color: #1E3A8A;
@@ -74,46 +73,68 @@
       border-color: #1E3A8A;
     }
 
-    .numbered-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-    }
-
-    .number-card {
+    /* Formal Administrative / SSS Member Data Record card */
+    .data-record-card {
       background: #ffffff;
       border: 1px solid #bfdbfe;
       border-radius: 12px;
-      padding: 1.5rem;
+      padding: 1.25rem 1.5rem;
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 0.85rem;
+      max-height: 68vh;
+      overflow-y: auto;
       box-shadow: 0 2px 6px rgba(30,58,138,0.02);
     }
 
-    .badge-number {
-      background: #1E3A8A;
-      color: #ffffff;
+    .data-record-title {
       font-size: 0.8rem;
       font-weight: 800;
-      width: 36px;
-      height: 28px;
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .number-card h3 {
-      font-size: 1.1rem;
-      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
       color: #1E3A8A;
+      border-bottom: 2px solid #bfdbfe;
+      padding-bottom: 0.3rem;
+      margin-bottom: 0.2rem;
     }
 
-    .number-card p {
-      font-size: 0.85rem;
-      line-height: 1.5;
-      color: #3b82f6;
+    .data-section-label {
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #1E3A8A;
+      background: #eff6ff;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      border-left: 3px solid #1E3A8A;
+      margin-top: 0.2rem;
+    }
+
+    .data-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 1rem;
+    }
+
+    .data-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .field-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #60a5fa;
+    }
+
+    .field-value {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #1E3A8A;
     }
   </style>
 </head>
@@ -142,11 +163,11 @@
         <div class="about-left">
           <div>
             <span class="cs-badge">Personal Info</span>
-            <h1 style="font-size: 3rem; font-weight: 900; letter-spacing: -1px; margin-top: 0.25rem; color: #1E3A8A;">ABOUT ME</h1>
-            <p style="font-size: 0.95rem; font-weight: 700; color: #1E3A8A; margin-top: 0.25rem;">Xavier Czachie Jhay O. Rivera</p>
+            <h1 style="font-size: 2.75rem; font-weight: 900; letter-spacing: -1px; margin-top: 0.2rem; color: #1E3A8A;">ABOUT ME</h1>
+            <p style="font-size: 0.95rem; font-weight: 700; color: #1E3A8A; margin-top: 0.2rem;">Xavier Czachie Jhay O. Rivera</p>
           </div>
 
-          <p style="font-size: 0.95rem; line-height: 1.6; color: #3b82f6;">
+          <p style="font-size: 0.9rem; line-height: 1.5; color: #3b82f6;">
             Passionate about breaking down complex computing challenges into streamlined solutions. Focused on object-oriented programming, data structures, and modern front-end web design.
           </p>
 
@@ -155,7 +176,6 @@
               🎓 BS Computer Science in the University of the Cordilleras
             </div>
 
-            <!-- GitHub Pages Portfolio row with larger icons positioned middle-right -->
             <div class="github-row">
               <div class="about-bio-item" style="margin: 0;">
                 📍 GitHub Pages Portfolio
@@ -164,10 +184,10 @@
                 <a href="https://github.com/xavivi070419" target="_blank" class="inline-social-icon" title="GitHub">
                   <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                 </a>
-                <a href="https://www.linkedin.com/in/xav-undefined-b87b01443/" target="_blank" class="inline-social-icon" title="LinkedIn">
+                <a href="https://linkedin.com" target="_blank" class="inline-social-icon" title="LinkedIn">
                   <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 </a>
-                <a href="mailto:czachiejhay@gmail.com" class="inline-social-icon" title="Email">
+                <a href="mailto:your-email@example.com" class="inline-social-icon" title="Email">
                   <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.181l10 8.101 10-8.101v11.181h-20z"/></svg>
                 </a>
               </div>
@@ -179,37 +199,81 @@
           </div>
 
           <div>
-            <a href="achievements.html" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.85rem;">VIEW ACHIEVEMENTS &rarr;</a>
+            <a href="achievements.html" class="btn btn-primary" style="padding: 0.7rem 1.4rem; font-size: 0.85rem;">VIEW ACHIEVEMENTS &rarr;</a>
           </div>
         </div>
 
-        <!-- Right Column: 2x2 Numbered Feature Cards -->
-        <div class="numbered-grid">
-          
-          <div class="number-card">
-            <div class="badge-number">01</div>
-            <h3>Clean Execution</h3>
-            <p>Writing readable, maintainable, and efficient code with strict attention to modular architecture.</p>
+        <!-- Right Column: SSS-Style Multi-Section Data Sheet -->
+        <div class="data-record-card">
+          <div class="data-record-title">Personal Information</div>
+
+          <!-- Section I: Personal Information -->
+          <div class="data-section-label">I. Personal Information</div>
+          <div class="data-grid">
+            <div class="data-field">
+              <span class="field-label">Full Name</span>
+              <span class="field-value">Xavier Czachie Jhay O. Rivera</span>
+            </div>
+            <div class="data-field">
+              <span class="field-label">Civil Status / Sex</span>
+              <span class="field-value">Single / Male</span>
+            </div>
+            <div class="data-field">
+              <span class="field-label">Citizenship</span>
+              <span class="field-value">Filipino</span>
+            </div>
+            <div class="data-field">
+              <span class="field-label">Height</span>
+              <span class="field-value">5'4"</span>
+            </div>
           </div>
 
-          <div class="number-card">
-            <div class="badge-number">02</div>
-            <h3>UI/UX Aesthetics</h3>
-            <p>Designing editorial high-contrast web interfaces that prioritize legibility and user delight.</p>
+          <!-- Section II: Contact & Address Info -->
+          <div class="data-section-label">II. Contact & Address Info</div>
+          <div class="data-grid">
+            <div class="data-field" style="grid-column: span 2;">
+              <span class="field-label">Current Address</span>
+              <span class="field-value">Baguio City, Cordillera Administrative Region, Philippines</span>
+            </div>
+            <div class="data-field">
+              <span class="field-label">Mobile Number</span>
+              <span class="field-value">+63 961 292 1183</span>
+            </div>
+            <div class="data-field">
+              <span class="field-label">Email Address</span>
+              <span class="field-value">czachiejhay@gmail.com</span>
+            </div>
           </div>
 
-          <div class="number-card">
-            <div class="badge-number">03</div>
-            <h3>System Logic</h3>
-            <p>Understanding low-level hardware interactions alongside high-level software frameworks.</p>
+          <!-- Section III: Family Background -->
+          <div class="data-section-label">III. Family Background</div>
+          <div class="data-grid">
+            <div class="data-field">
+              <span class="field-label">Father's Occupation</span>
+              <span class="field-value">Seafarer (Overseas)</span>
+            </div>
+            <div class="data-field">
+              <span class="field-label">Mother's Role</span>
+              <span class="field-value">Home Management & Support</span>
+            </div>
           </div>
 
-          <div class="number-card">
-            <div class="badge-number">04</div>
-            <h3>Continuous Growth</h3>
-            <p>Regularly expanding knowledge through collaborative university projects and open-source explorations.</p>
+          <!-- Section IV: Educational Background -->
+          <div class="data-section-label">IV. Educational Background</div>
+          <div class="data-grid">
+            <div class="data-field" style="grid-column: span 2;">
+              <span class="field-label">Tertiary Education</span>
+              <span class="field-value">BS Computer Science — University of the Cordilleras</span>
+            </div>
+            <div class="data-field">
+              <span class="field-label">Status / Level</span>
+              <span class="field-value">First-Year Student</span>
+            </div>
+            <div class="data-field">
+              <span class="field-label">Prior Program</span>
+              <span class="field-value">BS Civil Engineering (Shifted)</span>
+            </div>
           </div>
-
         </div>
 
       </div>
