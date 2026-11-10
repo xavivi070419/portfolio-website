@@ -53,5 +53,34 @@
     </footer>
 
   </div>
+
+  <script>
+  // Smooth exit transition when clicking internal navigation links
+  document.addEventListener('click', function (e) {
+    const link = e.target.closest('a');
+    if (link && link.href && link.origin === window.location.origin && !link.target) {
+      const href = link.getAttribute('href');
+      // Intercept internal HTML page links
+      if (href && href.endsWith('.html') && href !== window.location.pathname.split('/').pop()) {
+        e.preventDefault();
+        const targetUrl = link.href;
+        
+        // Trigger smooth fade-out on the container
+        const container = document.querySelector('.app-container');
+        if (container) {
+          container.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+          container.style.opacity = '0';
+          container.style.transform = 'scale(0.98) translateY(6px)';
+        }
+
+        // Navigate after transition completes
+        setTimeout(() => {
+          window.location.href = targetUrl;
+        }, 200);
+      }
+    }
+  });
+</script>
+  
 </body>
 </html>
