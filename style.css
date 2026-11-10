@@ -277,3 +277,37 @@ html, body {
   font-size: 1.5rem;
   color: #1E3A8A;
 }
+
+/* Entrance Pop-Up Animation */
+@keyframes portfolioEntrance {
+  0% { opacity: 0; transform: scale(0.96) translateY(12px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+body {
+  animation: portfolioEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Button Active Press Animation */
+button, .nav-btn, .action-btn {
+  transition: transform 0.12s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease;
+}
+button:active, .nav-btn:active {
+  transform: scale(0.95) translateY(1px) !important;
+}
+
+/* Page Section Transitions */
+.page-section {
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page-section.active {
+  display: block;
+}
+.page-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
