@@ -17,7 +17,6 @@ html, body {
   background-image: linear-gradient(to right, rgba(30, 58, 138, 0.03) 1px, transparent 1px),
                     linear-gradient(to bottom, rgba(30, 58, 138, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
-  /* All default text set to Aureu Blue (#1E3A8A) */
   color: #1E3A8A;
 }
 
@@ -28,6 +27,8 @@ html, body {
   height: 100vh;
   padding: 2rem 4rem;
   justify-content: space-between;
+  will-change: opacity, transform;
+  animation: portfolioEntrance 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* ==========================================
@@ -66,12 +67,16 @@ html, body {
   color: #60a5fa;
   font-size: 0.9rem;
   font-weight: 600;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, transform 0.15s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
   color: #1E3A8A;
+}
+
+.nav-link:active {
+  transform: scale(0.95);
 }
 
 /* Right Status Badge */
@@ -167,7 +172,10 @@ html, body {
   font-size: 0.95rem;
   text-decoration: none;
   border-radius: 6px;
-  transition: all 0.2s ease;
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), 
+              background-color 0.2s ease, 
+              box-shadow 0.2s ease;
+  will-change: transform;
 }
 
 .btn-primary {
@@ -177,6 +185,7 @@ html, body {
 
 .btn-primary:hover {
   background: #172554;
+  transform: translateY(-2px);
 }
 
 .btn-outline {
@@ -187,6 +196,11 @@ html, body {
 
 .btn-outline:hover {
   background: #eff6ff;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: scale(0.95) translateY(1px) !important;
 }
 
 /* ==========================================
@@ -263,13 +277,18 @@ html, body {
   color: #1E3A8A;
   text-decoration: none;
   background: #ffffff;
-  transition: all 0.2s ease;
+  transition: transform 0.15s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .social-icon:hover {
   background: #1E3A8A;
   color: #ffffff;
   border-color: #1E3A8A;
+  transform: translateY(-2px);
+}
+
+.social-icon:active {
+  transform: scale(0.93);
 }
 
 .signature {
@@ -278,36 +297,16 @@ html, body {
   color: #1E3A8A;
 }
 
-/* Entrance Pop-Up Animation */
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
 @keyframes portfolioEntrance {
-  0% { opacity: 0; transform: scale(0.96) translateY(12px); }
-  100% { opacity: 1; transform: scale(1) translateY(0); }
+  0% { 
+    opacity: 0; 
+    transform: scale(0.97) translateY(10px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: scale(1) translateY(0); 
+  }
 }
-
-body {
-  animation: portfolioEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-/* Button Active Press Animation */
-button, .nav-btn, .action-btn {
-  transition: transform 0.12s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease;
-}
-button:active, .nav-btn:active {
-  transform: scale(0.95) translateY(1px) !important;
-}
-
-/* Page Section Transitions */
-.page-section {
-  display: none;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.page-section.active {
-  display: block;
-}
-.page-section.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
