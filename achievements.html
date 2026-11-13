@@ -3,8 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xavier | Achievements</title>
+  <title>Xavier Rivera | Achievements</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Specific overrides for achievements image gallery integration */
+    .achievements-grid {
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 1.15rem;
+      width: 100%;
+    }
+    .featured-card {
+      grid-row: span 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .shs-photo-preview {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+    .shs-thumb {
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid #bfdbfe;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+    .shs-thumb:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
+    }
+  </style>
 </head>
 <body>
   <div class="app-container">
@@ -12,75 +45,99 @@
     <!-- Top Pill Navbar -->
     <header class="navbar">
       <a href="index.html" class="brand-logo">XAVIER.</a>
-      <ul class="nav-pill-container">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="personal-info.html" class="nav-link">Personal Information</a></li>
-        <li><a href="achievements.html" class="nav-link active">Achievements</a></li>
-        <li><a href="family.html" class="nav-link">Family</a></li>
-      </ul>
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-pill-container">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="personal-info.html" class="nav-link">Personal Information</a></li>
+          <li><a href="achievements.html" class="nav-link active">Achievements</a></li>
+          <li><a href="family.html" class="nav-link">Family & Friends</a></li>
+        </ul>
+      </nav>
       <div class="status-badge">
-        <span class="status-dot"></span> No-Scroll Dashboard View
+        <span class="status-dot"></span> BSCS • Batch 2026
       </div>
     </header>
 
     <!-- Main Content Area -->
-    <main class="main-content" style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 1.5rem;">
-      <div>
-        <span class="cs-badge">Milestones & Work</span>
-        <h2 style="font-size: 2.2rem; font-weight: 800; color: #1E3A8A;">Projects & Achievements</h2>
+    <main class="main-content achievements-main">
+      <div class="achievements-header anim-item" style="--delay: 0.05s;">
+        <span class="cs-badge">⟨/⟩ Milestones & Work</span>
+        <h2 class="page-heading">PROJECTS & ACHIEVEMENTS</h2>
       </div>
 
-      <div class="page-grid">
-        <div class="card">
+      <div class="page-grid achievements-grid">
+        <!-- Card 1: Featured SHS Milestone with Photo Proof -->
+        <div class="card card-hover featured-card anim-item" style="--delay: 0.1s;">
+          <div>
+            <div class="card-tag">SHS Milestone</div>
+            <h3>Graduated with Honors & Research Award</h3>
+            <p>Completed STEM strand at UC Integrated School[cite: 3, 4] with honors and research recognition.</p>
+          </div>
+          <!-- Dual Graduation Photo Proof -->
+          <div class="shs-photo-preview">
+            <img src="shs-grad-portrait.jpg" alt="Xavier Graduation Studio Portrait" class="shs-thumb" title="Click to expand studio portrait">
+            <img src="shs-grad-ceremony.jpg" alt="Xavier Holding Diploma and Certificate" class="shs-thumb" title="Click to expand ceremony photo">
+          </div>
+        </div>
+
+        <!-- Card 2: Java Multi-Base Calculator -->
+        <div class="card card-hover anim-item" style="--delay: 0.15s;">
+          <div class="card-tag">Software Dev</div>
           <h3>Multi-Base Calculator</h3>
-          <p>Built a functional Java program performing arithmetic conversions across Binary, Octal, Decimal, and Hexadecimal bases.</p>
+          <p>Engineered a functional Java program performing arithmetic conversions across Binary, Octal, Decimal, and Hexadecimal bases.</p>
         </div>
-        <div class="card">
-          <h3>GitHub Portfolio Site</h3>
-          <p>Designed and deployed a responsive multi-page website on GitHub Pages with zero-scroll viewport navigation.</p>
+
+        <!-- Card 3: Digital Logic & Hardware Simulation -->
+        <div class="card card-hover anim-item" style="--delay: 0.2s;">
+          <div class="card-tag">Hardware Logic</div>
+          <h3>BCD to 7-Segment Decoder</h3>
+          <p>Designed optimized combinational logic gate grids to translate binary-coded decimal inputs into accurate digital display outputs.</p>
         </div>
-        <div class="card">
-          <h3>Academic Transition</h3>
-          <p>Successfully shifted into Computer Science, excelling in foundational programming and computing coursework.</p>
+
+        <!-- Card 4: Web Portfolio Architecture -->
+        <div class="card card-hover anim-item" style="--delay: 0.25s;">
+          <div class="card-tag">Web Systems</div>
+          <h3>Zero-Scroll Portfolio</h3>
+          <p>Designed and hard-coded a responsive multi-page web dashboard on GitHub Pages featuring Aureu Blue styling.</p>
+        </div>
+
+        <!-- Card 5: Professional Experience (Service Crew & VA) -->
+        <div class="card card-hover anim-item" style="--delay: 0.3s;">
+          <div class="card-tag">Professional Experience</div>
+          <h3>Service Crew & Virtual Assistant</h3>
+          <p>Gained hands-on experience in fast-paced operational service environments and provided remote digital assistance, sharpening client communication, task management, and adaptability.</p>
         </div>
       </div>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-      <a href="personal-info.html" class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.85rem;">&larr; Back: Personal Information</a>
-      <div class="signature">Xavier...</div>
+      <a href="personal-info.html" class="btn btn-outline btn-sm">&larr; Back: Personal Info</a>
+      <div class="signature">© 2026 Xavier Rivera</div>
     </footer>
 
   </div>
 
   <script>
-  // Smooth exit transition when clicking internal navigation links
-  document.addEventListener('click', function (e) {
-    const link = e.target.closest('a');
-    if (link && link.href && link.origin === window.location.origin && !link.target) {
-      const href = link.getAttribute('href');
-      // Intercept internal HTML page links
-      if (href && href.endsWith('.html') && href !== window.location.pathname.split('/').pop()) {
-        e.preventDefault();
-        const targetUrl = link.href;
-        
-        // Trigger smooth fade-out on the container
-        const container = document.querySelector('.app-container');
-        if (container) {
-          container.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
-          container.style.opacity = '0';
-          container.style.transform = 'scale(0.98) translateY(6px)';
+    document.addEventListener('click', function (e) {
+      const link = e.target.closest('a');
+      if (link && link.href && link.origin === window.location.origin && !link.target) {
+        const href = link.getAttribute('href');
+        if (href && href.endsWith('.html') && href !== window.location.pathname.split('/').pop()) {
+          e.preventDefault();
+          const targetUrl = link.href;
+          const container = document.querySelector('.app-container');
+          if (container) {
+            container.style.transition = 'opacity 0.22s cubic-bezier(0.4, 0, 0.2, 1), transform 0.22s cubic-bezier(0.4, 0, 0.2, 1)';
+            container.style.opacity = '0';
+            container.style.transform = 'translateY(-8px)';
+          }
+          setTimeout(() => {
+            window.location.href = targetUrl;
+          }, 220);
         }
-
-        // Navigate after transition completes
-        setTimeout(() => {
-          window.location.href = targetUrl;
-        }, 200);
       }
-    }
-  });
-</script>
-  
+    });
+  </script>
 </body>
 </html>
