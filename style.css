@@ -576,3 +576,24 @@ html, body {
   font-weight: 600;
   color: #1E3A8A;
 }
+
+/* ==========================================
+   ACHIEVEMENTS PAGE LAYOUT (Expanded Grid)
+   ========================================== */
+.achievements-main {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start !important;
+  gap: 1rem;
+}
+
+.achievements-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+.featured-card {
+  grid-column: span 1;
+  grid-row: span 2;
+}
