@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xavier | Home</title>
+  <title>Xavier Rivera | Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,81 +12,95 @@
     <!-- Top Pill Navbar -->
     <header class="navbar">
       <a href="index.html" class="brand-logo">XAVIER.</a>
-      <ul class="nav-pill-container">
-        <li><a href="index.html" class="nav-link active">Home</a></li>
-        <li><a href="personal-info.html" class="nav-link">Personal Information</a></li>
-        <li><a href="achievements.html" class="nav-link">Achievements</a></li>
-        <li><a href="family.html" class="nav-link">Family</a></li>
-      </ul>
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-pill-container">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="personal-info.html" class="nav-link">Personal Information</a></li>
+          <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+          <li><a href="family.html" class="nav-link">Family & Friends</a></li>
+        </ul>
+      </nav>
       <div class="status-badge">
-        <span class="status-dot"></span> No-Scroll Dashboard View
+        <span class="status-dot"></span> BSCS • Batch 2026
       </div>
     </header>
 
     <!-- Main Hero Content -->
     <main class="main-content">
       <div class="hero-text">
-        <div class="cs-badge">⟨/⟩ Computer Science Student</div>
-        <span class="greeting-tag" style="display:block; font-size: 0.9rem; color: #1E3A8A; margin-bottom: 0.25rem;">Hello, I'm</span>
-        <h1 class="hero-title">XAVIER CZACHIE JHAY O. RIVERA</h1>
-        <p class="hero-description">
+        <div class="cs-badge anim-item" style="--delay: 0.05s;">⟨/⟩ Computer Science Student</div>
+        <span class="greeting-tag anim-item" style="--delay: 0.1s;">Hello, I'm</span>
+        <h1 class="hero-title anim-item" style="--delay: 0.15s;">XAVIER CZACHIE JHAY O. RIVERA</h1>
+        <p class="hero-description anim-item" style="--delay: 0.2s;">
           First-Year Computer Science Student dedicated to <strong>designing clean, efficient systems</strong> and crafting high-impact web experiences.
         </p>
-        <div class="cta-group">
+        
+        <div class="cta-group anim-item" style="--delay: 0.25s;">
           <a href="achievements.html" class="btn btn-primary">View Achievements &rarr;</a>
-          <a href="personal-info.html" class="btn btn-outline">Personal Information</a>
+          <a href="personal-info.html" class="btn btn-outline">Personal Info</a>
+          <a href="family.html" class="btn btn-outline">Family</a>
+        </div>
+
+        <!-- Compact Focus Strip to balance vertical rhythm -->
+        <div class="focus-strip anim-item" style="--delay: 0.32s;">
+          <div class="focus-item">
+            <span class="focus-label">FOCUS</span>
+            <span class="focus-val">Web & UI Systems</span>
+          </div>
+          <div class="focus-divider"></div>
+          <div class="focus-item">
+            <span class="focus-label">LANGUAGES</span>
+            <span class="focus-val">Java, HTML/CSS, JS</span>
+          </div>
+          <div class="focus-divider"></div>
+          <div class="focus-item">
+            <span class="focus-label">LOCATION</span>
+            <span class="focus-val">Baguio City, PH</span>
+          </div>
         </div>
       </div>
 
-      <div class="photo-wrapper">
-        <img src="photo.jpg" alt="Xavier Portrait" class="profile-img">
+      <div class="photo-wrapper anim-photo">
+        <img src="photo.jpg" alt="Portrait of Xavier Czachie Jhay O. Rivera" class="profile-img">
       </div>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
       <div class="social-links">
-        <a href="https://github.com/xavivi070419" target="_blank" class="social-icon" title="GitHub">
+        <a href="https://github.com/xavivi070419" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
           <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
         </a>
-        <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn">
-          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-        <a href="mailto:your-email@example.com" class="social-icon" title="Email">
+        <!-- Replace with your real email address -->
+        <a href="mailto:czachiejhay@gmail.com" class="social-icon" title="Email">
           <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.181l10 8.101 10-8.101v11.181h-20z"/></svg>
         </a>
       </div>
-      <div class="signature">Xavier...</div>
+      <div class="signature">© 2026 Xavier Rivera</div>
     </footer>
 
   </div>
-  <script>
-  // Smooth exit transition when clicking internal navigation links
-  document.addEventListener('click', function (e) {
-    const link = e.target.closest('a');
-    if (link && link.href && link.origin === window.location.origin && !link.target) {
-      const href = link.getAttribute('href');
-      // Intercept internal HTML page links
-      if (href && href.endsWith('.html') && href !== window.location.pathname.split('/').pop()) {
-        e.preventDefault();
-        const targetUrl = link.href;
-        
-        // Trigger smooth fade-out on the container
-        const container = document.querySelector('.app-container');
-        if (container) {
-          container.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
-          container.style.opacity = '0';
-          container.style.transform = 'scale(0.98) translateY(6px)';
-        }
 
-        // Navigate after transition completes
-        setTimeout(() => {
-          window.location.href = targetUrl;
-        }, 200);
+  <script>
+    document.addEventListener('click', function (e) {
+      const link = e.target.closest('a');
+      if (link && link.href && link.origin === window.location.origin && !link.target) {
+        const href = link.getAttribute('href');
+        if (href && href.endsWith('.html') && href !== window.location.pathname.split('/').pop()) {
+          e.preventDefault();
+          const targetUrl = link.href;
+          const container = document.querySelector('.app-container');
+          if (container) {
+            container.style.transition = 'opacity 0.22s cubic-bezier(0.4, 0, 0.2, 1), transform 0.22s cubic-bezier(0.4, 0, 0.2, 1)';
+            container.style.opacity = '0';
+            container.style.transform = 'translateY(-8px)';
+          }
+          setTimeout(() => {
+            window.location.href = targetUrl;
+          }, 220);
+        }
       }
-    }
-  });
- </script>
-  
+    });
+  </script>
 </body>
 </html>
