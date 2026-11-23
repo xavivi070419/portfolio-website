@@ -153,6 +153,35 @@
         max-height: none;
       }
     }
+
+        /* ===== FAMILY PAGE ADD-ONS (delete this block to undo) ===== */
+    .family-photo-grid.four-up {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.9rem;
+    }
+
+    .four-up .portrait-frame {
+      height: 31vh;
+      max-height: 300px;
+      min-height: 190px;
+    }
+
+    .photo-desc {
+      font-size: 0.78rem;
+      line-height: 1.4;
+      color: #3b82f6;
+      padding: 0 0.2rem 0.15rem;
+    }
+
+    @media (max-width: 900px) {
+      .family-photo-grid.four-up { grid-template-columns: 1fr 1fr; }
+      .four-up .portrait-frame { height: 260px; min-height: 0; max-height: none; }
+    }
+
+    @media (max-width: 560px) {
+      .family-photo-grid.four-up { grid-template-columns: 1fr; }
+    }
+    
   </style>
 </head>
 <body>
