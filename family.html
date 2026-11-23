@@ -1,88 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xavier | Family & Friends</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family &amp; Friends | Xavier Czachie Jhay O. Rivera</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .family-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.9rem;
+      max-width: 1120px;
+      width: 100%;
+      margin: 0 auto;
+      min-height: 0;
+    }
+
+    .family-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* 3-Column Portrait Grid */
+    .family-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.1rem;
+      width: 100%;
+    }
+
+    .family-photo-card {
+      background: #ffffff;
+      border: 1px solid #bfdbfe;
+      border-radius: 12px;
+      padding: 0.65rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      box-shadow: 0 4px 16px rgba(30, 58, 138, 0.04);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.25s ease,
+                  box-shadow 0.25s ease;
+    }
+
+    .family-photo-card:hover {
+      transform: translateY(-3px);
+      border-color: #93c5fd;
+      box-shadow: 0 10px 24px rgba(30, 58, 138, 0.08);
+    }
+
+    .portrait-frame {
+      width: 100%;
+      height: 36vh;
+      max-height: 310px;
+      min-height: 200px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #eff6ff;
+      border: 1px solid #dbeafe;
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+    }
+
+    .photo-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0.2rem;
+    }
+
+    .photo-title {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: #1E3A8A;
+    }
+
+    .photo-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #3b82f6;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    /* Bottom 2-Column Values Strip */
+    .values-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.1rem;
+      width: 100%;
+    }
+
+    .value-box {
+      background: #ffffff;
+      border: 1px solid #bfdbfe;
+      border-radius: 10px;
+      padding: 0.85rem 1.15rem;
+      box-shadow: 0 2px 6px rgba(30, 58, 138, 0.02);
+    }
+
+    .value-box h3 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #1E3A8A;
+      margin-bottom: 0.2rem;
+    }
+
+    .value-box p {
+      font-size: 0.82rem;
+      line-height: 1.45;
+      color: #3b82f6;
+    }
+
+    /* Fix clipped cursive signature in footer */
+    .footer .signature {
+      white-space: nowrap;
+      padding-right: 0.35rem;
+    }
+
+    @media (max-width: 900px) {
+      html, body, .app-container {
+        height: auto;
+        min-height: 100vh;
+        overflow: auto;
+      }
+
+      .family-photo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .values-row {
+        grid-template-columns: 1fr;
+      }
+
+      .portrait-frame {
+        height: 320px;
+        max-height: none;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="app-container">
-    
-    <!-- Top Pill Navbar -->
-    <header class="navbar">
+    <nav class="navbar">
       <a href="index.html" class="brand-logo">XAVIER.</a>
+
       <ul class="nav-pill-container">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="personal-info.html" class="nav-link">Personal Information</a></li>
         <li><a href="achievements.html" class="nav-link">Achievements</a></li>
-        <li><a href="family.html" class="nav-link active">Family & Friends</a></li>
+        <li><a href="family.html" class="nav-link active">Family &amp; Friends</a></li>
       </ul>
+
       <div class="status-badge">
-        <span class="status-dot"></span> No-Scroll Dashboard View
+        <span class="status-dot"></span>
+        <span>BSCS • Batch 2026</span>
       </div>
-    </header>
+    </nav>
 
-    <!-- Main Content Area -->
-    <main class="main-content" style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 1.5rem;">
-      <div>
-        <span class="cs-badge">Background</span>
-        <h2 style="font-size: 2.2rem; font-weight: 800; color: #1E3A8A;">Family & Friends</h2>
-      </div>
-
-      <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; width: 100%; align-items: center;">
-        <div style="width: 100%; display: flex; justify-content: center;">
-          <img src="family-photo.jpg" alt="Family Photo" style="width: 100%; max-height: 50vh; object-fit: cover; border-radius: 8px; border: 1px solid #bfdbfe;">
+    <main class="family-main">
+      <div class="family-top">
+        <div>
+          <span class="cs-badge">BACKGROUND</span>
+          <h1 class="page-heading">Family &amp; Friends</h1>
         </div>
-
-        <div style="display: flex; flex-direction: column; gap: 1rem; width: 100%;">
-          <div class="card" style="padding: 1.25rem;">
-            <h3>Support System</h3>
-            <p>A grounded foundation centered around strong core values, guidance, and shared family experiences.</p>
-          </div>
-          <div class="card" style="padding: 1.25rem;">
-            <h3>Core Values</h3>
-            <p>Instilling a strong work ethic, discipline, and persistence to excel through computer science and academic challenges.</p>
-          </div>
-        </div>
+        <p class="about-summary" style="max-width: 440px;">
+          The people behind my journey—grounding my values at home and pushing me forward in college.
+        </p>
       </div>
+
+      <section class="family-photo-grid" aria-label="Family and Friends Photos">
+        <!-- 1. Parents -->
+        <article class="family-photo-card">
+          <div class="portrait-frame">
+            <img src="parents.jpg" alt="Xavier with Mom and Dad" />
+          </div>
+          <div class="photo-meta">
+            <span class="photo-title">Mom &amp; Dad</span>
+            <span class="photo-tag">Parents</span>
+          </div>
+        </article>
+
+        <!-- 2. Siblings -->
+        <article class="family-photo-card">
+          <div class="portrait-frame">
+            <img src="siblings.jpg" alt="Xavier with his siblings" />
+          </div>
+          <div class="photo-meta">
+            <span class="photo-title">My Siblings</span>
+            <span class="photo-tag">Family</span>
+          </div>
+        </article>
+
+        <!-- 3. Friends -->
+        <article class="family-photo-card">
+          <div class="portrait-frame">
+            <img src="friends.jpg" alt="Xavier with his college friends" />
+          </div>
+          <div class="photo-meta">
+            <span class="photo-title">College Circle</span>
+            <span class="photo-tag">Friends</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="values-row">
+        <div class="value-box">
+          <h3>Support System</h3>
+          <p>
+            A grounded foundation centered around strong core values, guidance, and shared family experiences.
+          </p>
+        </div>
+        <div class="value-box">
+          <h3>Core Values</h3>
+          <p>
+            Instilling a strong work ethic, discipline, and persistence to excel through computer science and academic challenges.
+          </p>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-      <a href="achievements.html" class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.85rem;">&larr; Back: Achievements</a>
-      <div class="signature">Xavier...</div>
+      <a href="achievements.html" class="btn btn-outline btn-sm">&larr; Back: Achievements</a>
+      <span class="signature">Xavier Rivera</span>
     </footer>
-
   </div>
-
-  <script>
-  // Smooth exit transition when clicking internal navigation links
-  document.addEventListener('click', function (e) {
-    const link = e.target.closest('a');
-    if (link && link.href && link.origin === window.location.origin && !link.target) {
-      const href = link.getAttribute('href');
-      // Intercept internal HTML page links
-      if (href && href.endsWith('.html') && href !== window.location.pathname.split('/').pop()) {
-        e.preventDefault();
-        const targetUrl = link.href;
-        
-        // Trigger smooth fade-out on the container
-        const container = document.querySelector('.app-container');
-        if (container) {
-          container.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
-          container.style.opacity = '0';
-          container.style.transform = 'scale(0.98) translateY(6px)';
-        }
-
-        // Navigate after transition completes
-        setTimeout(() => {
-          window.location.href = targetUrl;
-        }, 200);
-      }
-    }
-  });
-</script>
-  
 </body>
 </html>
