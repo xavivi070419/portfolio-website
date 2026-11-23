@@ -835,8 +835,28 @@ body.home-page .home-strip {
   }
 }
 
+/* ===== PHOTO FIX (delete this whole block to undo) ===== */
+
+/* Give the page grid a firm row height */
+body.home-page .home-stage {
+  grid-template-rows: minmax(0, 1fr);
+}
+
+/* Left card: text on top, photo gets all the remaining space */
+body.home-page .left-identity {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+/* Photo box with the blue blend from before */
 body.home-page .full-body-box {
   position: relative;
+  min-height: 0;
+  isolation: isolate;
+  background-color: #e6edf9;
+  background-image:
+    radial-gradient(ellipse at 50% 35%, #f8fbff 0%, rgba(248, 251, 255, 0) 65%),
+    linear-gradient(180deg, #eef3fc 0%, #d5e0f4 100%);
 }
 
 body.home-page .full-body-box img {
@@ -848,8 +868,12 @@ body.home-page .full-body-box img {
   max-height: none;
   object-fit: contain;
   object-position: bottom center;
+  mix-blend-mode: multiply;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 14%, #000 86%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 14%, #000 86%, transparent 100%);
 }
 
+/* Space between the badge and the photo */
 body.home-page .status-inline {
   margin-bottom: 0.6rem;
 }
