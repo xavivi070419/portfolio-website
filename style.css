@@ -809,3 +809,17 @@ body.home-page .enter-btn:hover {
   color: #1E3A8A;
   background-color: rgba(30, 58, 138, 0.08);
 }
+
+body.home-page .status-inline {
+  display: inline-flex;
+  margin-top: 0.6rem;
+}
+
+body.home-page .status-dot {
+  animation: dotPulse 2s infinite;
+}
+
+@keyframes dotPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.45); }
+  100% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+}
