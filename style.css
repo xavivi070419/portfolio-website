@@ -879,3 +879,127 @@ body.home-page .home-strip {
     display: none;
   }
 }
+
+/* =========================================================
+   MOBILE VIEWPORT (<= 768px) — Scoped to Home Page
+   ========================================================= */
+@media (max-width: 768px) {
+  html:has(body.home-page),
+  body.home-page {
+    height: auto;
+    max-height: none;
+    min-height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  body.home-page .top-bar {
+    flex: none;
+    height: auto;
+    min-height: 54px;
+    padding: 0.75rem 1.25rem;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  body.home-page .brand {
+    font-size: 1.05rem;
+  }
+
+  body.home-page .course-tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* Stack Left Identity + Photo and Right Profile-Picker */
+  body.home-page .home-stage {
+    flex: none;
+    height: auto;
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.1rem 1.25rem 2rem;
+    align-items: start;
+  }
+
+  body.home-page .left-identity {
+    height: auto;
+    padding: 1.1rem 1.1rem 0;
+    overflow: visible;
+  }
+
+  body.home-page .main-name {
+    font-size: 1.55rem;
+  }
+
+  body.home-page .intro-copy {
+    font-size: 0.88rem;
+  }
+
+  /* Give the head-to-toe photo a dedicated mobile height so nothing crops */
+  body.home-page .full-body-box {
+    flex: none;
+    height: 360px;
+    margin-top: 1rem;
+  }
+
+  body.home-page .full-body-box img {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+  }
+
+  /* Profile Picker on Mobile */
+  body.home-page .right-picker {
+    padding-top: 0.25rem;
+  }
+
+  body.home-page .picker-heading {
+    font-size: 1.65rem;
+  }
+
+  body.home-page .picker-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.65rem;
+    width: 100%;
+    max-width: 440px;
+    margin-bottom: 1.4rem;
+  }
+
+  body.home-page .picker-card {
+    width: 100%;
+  }
+
+  body.home-page .picker-avatar {
+    border-radius: 8px;
+    gap: 0.3rem;
+    margin-bottom: 0.45rem;
+  }
+
+  body.home-page .avatar-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  body.home-page .avatar-tag {
+    font-size: 0.52rem;
+    letter-spacing: 0.04em;
+    padding: 0.16rem 0.32rem;
+    white-space: nowrap;
+  }
+
+  body.home-page .picker-label {
+    font-size: 0.78rem;
+    line-height: 1.2;
+  }
+
+  body.home-page .enter-btn {
+    width: 100%;
+    max-width: 440px;
+    text-align: center;
+    padding: 0.75rem 1.25rem;
+  }
+}
